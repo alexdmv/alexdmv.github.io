@@ -401,3 +401,20 @@ footer p {
 .icon-credit {
   font-size: 8px;
 }
+
+/*Google map*/
+
+#gmap_canvas {
+    height:500px;
+    width:600px;
+    margin:0 auto;
+    margin-bottom:35px;
+    border: 1px solid #776644;
+}
+
+@media(max-width:767px) {
+    #gmap_canvas {
+        width: 320px;
+        height: 400px;
+    }
+}
