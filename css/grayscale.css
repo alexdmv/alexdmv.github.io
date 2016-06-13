@@ -388,6 +388,10 @@ h1 {
     display: none;
 }
 
+footer {
+  border-top: 1px dotted black;
+}
+
 footer p {
   font-size: 15px;
 }
@@ -409,21 +413,43 @@ footer p {
     color: #776644;
 }
 
+/*-------- Cotnact form -------------------------- */
 
-/*-------- Google map -------------------------- */
-
-
-#gmap_canvas {
-    height:500px;
-    width:600px;
-    margin:0 auto;
-    margin-bottom:35px;
-    border: 1px solid #776644;
+form {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-@media(max-width:767px) {
-    #gmap_canvas {
-        width: 320px;
-        height: 400px;
-    }
+form div + div {
+    margin-top: 1.5em;
+}
+
+input, textarea {
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font: 1.3em sans-serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+    resize: vertical;
+}
+
+::-webkit-input-placeholder {
+   color: #776644;
+}
+
+button {
+    margin-top: 20px;
 }
