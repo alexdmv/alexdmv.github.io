@@ -473,7 +473,7 @@ button {
 .pricing-plan {
     display: inline-block;
     width: 250px;
-    border: 1px dotted #fff;
+    /*border-bottom: 1px dotted #fff;*/
     padding: 10px 15px;
     margin-bottom: 10px;
 }
