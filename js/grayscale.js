@@ -28,7 +28,3 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
-
-// Fades in intro spans
-$( "#intro-fade1" ).delay( 1200 ).fadeIn( 800 );
-$( "#intro-fade2" ).delay( 2800 ).fadeIn( 800 );

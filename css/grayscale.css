@@ -287,6 +287,7 @@ a:focus {
     .servies-section {
         padding: 100px 0;
     }
+
 }
 
 .btn {
@@ -332,6 +333,10 @@ ul.banner-social-buttons {
 
     ul.banner-social-buttons li:last-child {
         margin-bottom: 0;
+    }
+
+    i.fa-car {
+        display: none;
     }
 }
 
@@ -386,9 +391,10 @@ h1 {
     font-size: 22px;
 }
 
-#intro-fade1, #intro-fade2 {
+/*#intro-fade1, #intro-fade2 {
     display: none;
 }
+*/
 
 footer {
   border-top: 1px dotted black;
@@ -415,7 +421,7 @@ footer p {
     color: #776644;
 }
 
-/*-------- Cotnact form -------------------------- */
+/*-------- Contact form -------------------------- */
 
 form {
     margin-top: 100px;
@@ -454,4 +460,8 @@ textarea {
 
 button {
     margin-top: 20px;
+}
+
+.animated {
+    animation-duration: 2s;
 }
