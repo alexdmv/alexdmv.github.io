@@ -273,6 +273,7 @@ a:focus {
     padding: 50px 0;
     color: #fff;
     background-color: #111111;
+    opacity: 0.6;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -391,11 +392,6 @@ h1 {
     font-size: 22px;
 }
 
-/*#intro-fade1, #intro-fade2 {
-    display: none;
-}
-*/
-
 footer {
   border-top: 1px dotted black;
 }
@@ -408,6 +404,9 @@ footer p {
   font-size: 8px;
 }
 
+.animated {
+    animation-duration: 2s;
+}
 
 /*-------- about section icons -------------------------- */
 
@@ -434,7 +433,7 @@ form div + div {
 }
 
 input, textarea {
-    width: 300px;
+    min-width: 50%;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font: 1.3em sans-serif;
@@ -462,6 +461,32 @@ button {
     margin-top: 20px;
 }
 
-.animated {
-    animation-duration: 2s;
+/*-------- Pricing table -------------------------- */
+
+.plans {
+    /*display: flex*/
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.pricing-plan {
+    display: inline-block;
+    width: 250px;
+    border: 1px dotted #fff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.plan-price {
+    display: inline-block;
+    border-radius: 50%;
+    width: 65px;
+    background-color: #fff;
+    color: #000;
+    margin-left: 15px;
+}
+
+a.btn-contact-me {
+    color: #fff;
 }
