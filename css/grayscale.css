@@ -154,7 +154,9 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
+    /*On slow connection before bg img is loaded a gradietn 3 color based on bg image appears*/
     background: url(../img/intro2000.jpg) no-repeat bottom center scroll, linear-gradient(to bottom, #cab7a4 33%, #a8876b 66%, #84685e 100%);
+    background-color: #a8876b;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
