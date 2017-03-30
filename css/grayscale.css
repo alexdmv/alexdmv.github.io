@@ -317,19 +317,19 @@ a:focus {
 }
 
 ul.banner-social-buttons {
-    margin-top: 0;
+    margin: 15px auto;
+    max-width: 320px;
 }
 
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        margin-top: 15px;
-    }
+ul.banner-social-buttons .btn-default {
+    width: 180px;
+    margin-top: 15px;
 }
 
 @media(max-width:767px) {
     ul.banner-social-buttons li {
         display: block;
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
         padding: 0;
     }
 
@@ -465,7 +465,6 @@ button {
 /*-------- Pricing table -------------------------- */
 
 .plans {
-    /*display: flex*/
     font-size: 20px;
     margin-bottom: 40px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -474,7 +473,6 @@ button {
 .pricing-plan {
     display: inline-block;
     width: 250px;
-    /*border-bottom: 1px dotted #fff;*/
     padding: 10px 15px;
     margin-bottom: 10px;
 }
