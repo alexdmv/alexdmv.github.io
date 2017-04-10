@@ -273,7 +273,7 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background-color: #111111;
+    background-color: #fff;
     opacity: 0.6;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -468,24 +468,34 @@ button {
     font-size: 20px;
     margin-bottom: 40px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    max-width: 320px;
+    margin: 0 auto;
+    color: #764;
+}
+
+.services-section h3 {
+    color: #764;
 }
 
 .pricing-plan {
     display: inline-block;
-    width: 250px;
-    padding: 10px 15px;
+    width: 100%;
+    padding: 16px 0 0;
     margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px dotted #764;
+    position: relative;
+    text-align: left;
 }
 
 .plan-price {
     display: inline-block;
-    border-radius: 50%;
-    width: 65px;
-    background-color: #fff;
-    color: #000;
-    margin-left: 15px;
+    position: absolute;
+    right: 0;
+    font-weight: bold;
 }
 
+
 a.btn-contact-me {
-    color: #fff;
+    margin-top: 32px;
 }
