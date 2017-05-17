@@ -73,7 +73,6 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 
 	var buildFiles = gulp.src([
 		'app/*.html',
-		'app/.htaccess',
 		]).pipe(gulp.dest('dist'));
 
 	var buildCss = gulp.src([
@@ -84,16 +83,16 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 		'app/js/scripts.min.js',
 		]).pipe(gulp.dest('dist/js'));
 
-	var buildFonts = gulp.src([
-		'app/fonts/**/*',
-		]).pipe(gulp.dest('dist/fonts'));
+	// var buildFonts = gulp.src([
+	// 	'app/fonts/**/*',
+	// 	]).pipe(gulp.dest('dist/fonts'));
 
 });
 
 // Push build to gh-pages
 gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
-  	.pipe(deploy({branch: 'master'}));
+  	.pipe(deploy({branch: 'master', origin: 'www.alexdmv.com'}));
 });
 
 gulp.task('removedist', function() { return del.sync('dist'); });
