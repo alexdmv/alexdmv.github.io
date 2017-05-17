@@ -27,7 +27,6 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/mmenu/dist/jquery.mmenu.all.min.js',
 		'app/libs/owl.carousel/owl.carousel.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
@@ -94,7 +93,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 // Push build to gh-pages
 gulp.task('deploy', function () {
   return gulp.src("./dist/**/*")
-  	.pipe(delploy({branch: 'master'}));
+  	.pipe(deploy({branch: 'master'}));
 });
 
 gulp.task('removedist', function() { return del.sync('dist'); });
