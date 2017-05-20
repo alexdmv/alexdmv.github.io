@@ -181,7 +181,7 @@ section
 	height: 100vh
 	min-height: 550px
 	background-image: url("../img/bg.jpg")
-	background-color: $dark
+	background-color: $bg-fallback
 	color: #fff
 
 .header-flex
@@ -337,7 +337,6 @@ ul.feature-list
 
 
 // ~~~~~~~~~~ Rates ~~~~~~~~~~~
-
 .s-rates
 	background-image: url(../img/rates-bg.jpg)
 	background-size: cover
@@ -367,6 +366,10 @@ ul.feature-list
 .rate-wrapper-inverse
 	.rate-value
 		color: $blue
+
+.rate-custom
+	.rate-value
+		color: $green
 
 .rates-footer
 	position: relative

@@ -90,11 +90,6 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 });
 
 // Push build to gh-pages
-// gulp.task('deploy', function () {
-//   return gulp.src("./dist/**/*", "CNAME")
-//   	.pipe(deploy({branch: 'master'}));
-// });
-
 gulp.task('deploy', () => {
   return gulp.src(['./dist/**/*', 'CNAME'])
     .pipe(deploy({branch: 'master'}));
