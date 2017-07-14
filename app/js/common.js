@@ -25,7 +25,7 @@ $('a').click(function() {
 		items: 1,
 		dots: true,
 		autoplay: true,
-		autoplayTimeout: 8000,
+		autoplayTimeout: 12000,
 		autoplayHoverPause: true,
 		// autoHeight: true
 	});
