@@ -86,6 +86,8 @@ h1, h2, h3, h4, h5, h6
 			color: #444
 			&:after
 				background-color: rgba(#000, .4)
+.btn-appointment
+	padding: 15px 35px
 
 .img-responsive
 	display: block
@@ -339,6 +341,36 @@ ul.feature-list
 
 
 // ~~~~~~~~~~ Rates ~~~~~~~~~~~
+.rates-mobile
+	@media screen and (min-width: 768px)
+		display: none
+.price-block
+	margin-bottom: 20px
+	font-size: 2rem
+.price-title
+	padding-bottom: 0.8em
+.price-body
+	margin: 1em 0.5em
+.service-title
+	text-align: left
+	padding: 0.3em 0 0
+	margin-bottom: 0.3em
+	border-bottom: 1px dotted #d2d2d2
+	small
+		font-size: 1.2rem
+	span
+		float: right
+		text-align: right
+		color: $accent
+		&.rate-custom
+			color: $green
+
+
+
+.rates-desktop
+	@media screen and (max-width: 767px)
+		display: none
+
 .s-rates
 	background-image: url(../img/bg.jpg)
 	background-size: cover
