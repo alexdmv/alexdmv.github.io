@@ -13,7 +13,8 @@ var gulp           = require('gulp'),
 		cache          = require('gulp-cache'),
 		autoprefixer   = require('gulp-autoprefixer'),
 		deploy         = require('gulp-gh-pages'),
-		notify         = require("gulp-notify");
+		notify         = require("gulp-notify"),
+		htmlmin        = require('gulp-htmlmin');
 
 // Скрипты проекта
 
@@ -59,6 +60,12 @@ gulp.task('sass', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('minify', function() {
+  return gulp.src('app/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
@@ -71,7 +78,7 @@ gulp.task('imagemin', function() {
 	.pipe(gulp.dest('dist/img')); 
 });
 
-gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
+gulp.task('build', ['removedist', 'imagemin', 'sass', 'minify', 'js'], function() {
 
 	var buildFiles = gulp.src([
 		'app/*.html',
@@ -80,6 +87,10 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 	var buildCss = gulp.src([
 		'app/css/main.min.css',
 		]).pipe(gulp.dest('dist/css'));
+
+	// var buildHtml = gulp.src([
+	// 	'app/main.min.html',
+	// 	]).pipe(gulp.dest('dist/css'));	
 
 	var buildJs = gulp.src([
 		'app/js/scripts.min.js',
