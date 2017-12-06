@@ -80,17 +80,9 @@ gulp.task('imagemin', function() {
 
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'minify', 'js'], function() {
 
-	var buildFiles = gulp.src([
-		'app/*.html',
-		]).pipe(gulp.dest('dist'));
-
 	var buildCss = gulp.src([
 		'app/css/main.min.css',
 		]).pipe(gulp.dest('dist/css'));
-
-	// var buildHtml = gulp.src([
-	// 	'app/main.min.html',
-	// 	]).pipe(gulp.dest('dist/css'));	
 
 	var buildJs = gulp.src([
 		'app/js/scripts.min.js',
