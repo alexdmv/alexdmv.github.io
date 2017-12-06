@@ -72,6 +72,12 @@ h1, h2, h3, h4, h5, h6
 		background-color: darken($green, 5%)
 		&::after
 			opacity: .32
+	&-blue
+		background-color: $blue
+		&:focus, &:hover
+			background-color: lighten($blue, 5%)
+		&:active
+			background-color: lighten($blue, 5%)
 	&-white
 		background-color: #fff
 		color: #444
@@ -86,6 +92,7 @@ h1, h2, h3, h4, h5, h6
 			color: #444
 			&:after
 				background-color: rgba(#000, .4)
+
 .btn-appointment
 	padding: 15px 35px
 
@@ -109,7 +116,7 @@ section
 			color: $accent
 
 .s
-	&-rates, &-reviews
+	&-rates, &-reviews,
 		padding: 5% 0
 
 .phone-number
@@ -408,6 +415,13 @@ ul.feature-list
 .rates-footer
 	position: relative
 	font-size: 12px
+
+// ~~~~~~~~~~ onlineEd ~~~~~~~~~~~	
+
+.s-onlineEd
+	padding: 20px 0 56px 0
+	text-align: center
+	background-color: lighten($overlay, 8%)
 
 // ~~~~~~~~~~ Contact-form ~~~~~~~~~~~
 
