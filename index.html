@@ -29,7 +29,14 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#1a1a1a">
 
-	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #1a1a1a; }</style>
+	<style>
+		body { opacity: 0; overflow-x: hidden; }
+		html { background-color: #1a1a1a; }
+	</style>
+	<style>
+		.inputCheckbox { width: auto; margin: 0; display: inline-block; margin-right: 10px;} 
+		label { color: #333; }
+	</style>
 
 	<!-- Styles  -->
 	<link rel="stylesheet" href="css/main.min.css">
@@ -245,6 +252,8 @@
 								<input type="text" name="user_name" placeholder="Name">
 								<input type="text" name="_replyto" name="email" placeholder="Email">
 								<input type="text" name="phone" placeholder="Phone">
+								<input type="checkbox" class="inputCheckbox" name="email" value="email"><label for="checkbox">Contact me by email</label><br>
+								<input type="checkbox" class="inputCheckbox" name="phone" value="phone"><label for="checkbox">Contact me by phone</label><br>
 								<textarea id="msg" name="user_message" placeholder="Message"></textarea>
 								<button class="button button-white">Send</button>
 							</form>
