@@ -41,7 +41,8 @@
         /* Ensure header background provides good contrast */
         #site-header {
             background-color: theme('colors.dark-bg');
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1200x500/1a1a1a/ffffff?text=Safe+Driving'); /* Placeholder background */
+            /* Removed 'Safe Driving' text from placeholder image URL */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1200x500/1a1a1a/ffffff'); /* Placeholder background */
             background-size: cover;
             background-position: center;
         }
@@ -64,12 +65,24 @@
     <div id="my-page" class="min-h-screen">
 
         <!-- ~~~~~~~~~~ Header ~~~~~~~~~~ -->
-        <header id="site-header" class="relative text-light-text pt-10 pb-20 sm:pb-32 shadow-lg">
+        <header id="site-header" class="relative text-light-text pt-6 pb-20 sm:pb-32 shadow-lg">
 
-            <!-- Navigation and Social -->
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                <!-- Primary Menu -->
-                <nav class="hidden sm:flex space-x-6 text-sm font-medium">
+            <!-- Navigation and Social Container -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center sm:items-start">
+
+                <!-- Mobile/Desktop Logo & Contact -->
+                <a href="#my-page" class="text-xl font-extrabold text-white hover:text-secondary transition-colors mr-auto sm:mr-0">Alex Driving School</a>
+
+                <!-- Hamburger Button (Mobile Only) -->
+                <button id="mobile-menu-button" class="sm:hidden p-2 ml-4 rounded-lg hover:bg-gray-800 text-light-text focus:outline-none" aria-label="Toggle navigation" onclick="toggleMobileMenu()">
+                    <!-- Initial menu icon (hamburger) -->
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <!-- Close icon (X) - hidden by default -->
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden sm:flex space-x-6 text-sm font-medium mt-0 sm:mt-1">
                     <a href="#features" class="hover:text-secondary transition-colors flex items-center">
                         <!-- Car Icon SVG -->
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.8-.7-1.5-1.5-1.5h-1.5c-1.3 0-2.5.6-3.3 1.4L9 14.5V20H5c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h14v13Z"/><path d="M10 20v-7.5"/><path d="M21 16.5H19"/><path d="M14 8.5V4"/></svg>
@@ -92,8 +105,8 @@
                     </a>
                 </nav>
 
-                <!-- Social Links (All using inline SVGs) -->
-                <div class="flex space-x-4 mt-4 sm:mt-0">
+                <!-- Social Links (Desktop) -->
+                <div class="hidden sm:flex space-x-4 ml-6 mt-1">
                     <a href="https://www.facebook.com/alexdrivingschoolllc" target="_blank" aria-label="Facebook" class="hover:text-secondary transition-colors">
                         <!-- Facebook SVG -->
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h-13.8c-.8 0-1.5.7-1.5 1.5v17c0 .8.7 1.5 1.5 1.5h7.6v-7h-2.5v-3h2.5v-2c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.7-1.6 1.5v1.9h2.8l-.4 3h-2.4v7h4.8c.8 0 1.5-.7 1.5-1.5v-17c0-.8-.7-1.5-1.5-1.5z"/></svg>
@@ -113,8 +126,43 @@
                 </div>
             </div>
 
+            <!-- Mobile Menu (Initially Hidden) -->
+            <nav id="mobile-menu" class="hidden sm:hidden bg-dark-bg p-4 mt-4 space-y-4 text-base font-medium border-t border-gray-700 mx-4 rounded-b-lg shadow-lg">
+                <a href="#features" onclick="closeMobileMenu()" class="block hover:text-secondary transition-colors flex items-center">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.8-.7-1.5-1.5-1.5h-1.5c-1.3 0-2.5.6-3.3 1.4L9 14.5V20H5c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h14v13Z"/><path d="M10 20v-7.5"/><path d="M21 16.5H19"/><path d="M14 8.5V4"/></svg>
+                    About
+                </a>
+                <a href="#rates" onclick="closeMobileMenu()" class="block hover:text-secondary transition-colors flex items-center">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    Rates
+                </a>
+                <a href="#contact" onclick="closeMobileMenu()" class="block hover:text-secondary transition-colors flex items-center">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Contact
+                </a>
+                <a href="#reviews" onclick="closeMobileMenu()" class="block hover:text-secondary transition-colors flex items-center">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Reviews
+                </a>
+                <div class="flex space-x-4 pt-4 border-t border-gray-700">
+                    <a href="https://www.facebook.com/alexdrivingschoolllc" target="_blank" aria-label="Facebook" class="hover:text-secondary transition-colors">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h-13.8c-.8 0-1.5.7-1.5 1.5v17c0 .8.7 1.5 1.5 1.5h7.6v-7h-2.5v-3h2.5v-2c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.7-1.6 1.5v1.9h2.8l-.4 3h-2.4v7h4.8c.8 0 1.5-.7 1.5-1.5v-17c0-.8-.7-1.5-1.5-1.5z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/Alexdmv_com" target="_blank" aria-label="Twitter" class="hover:text-secondary transition-colors">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3.4l-4.1 5.6-4.5-5.6h-4.2l6.8 8.6-6.8 8.6h4.2l4.5-5.6 4.1 5.6h4.2l-6.8-8.6 6.8-8.6zM9.5 19.3l-2.6-3.4L13.7 5h2.6l-6.8 14.3z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/alex.driving.school" target="_blank" aria-label="Instagram" class="hover:text-secondary transition-colors">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                    <a href="mailto:alexdrivingschool2015@gmail.com" aria-label="Email" class="hover:text-secondary transition-colors">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                    </a>
+                </div>
+            </nav>
+
+
             <!-- Hero Composition -->
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-24 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-24 text-center">
                 <h3 class="text-4xl sm:text-5xl font-extrabold mb-2 leading-tight">
                     <span class="text-secondary">Alex</span> Driving School
                 </h3>
@@ -519,6 +567,30 @@
     <script>
         // Set the current year for the copyright
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // --- Mobile Menu Logic ---
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        /** Toggles the mobile menu open/closed and updates the icon. */
+        window.toggleMobileMenu = function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden', !isHidden);
+            closeIcon.classList.toggle('hidden', isHidden);
+            // Set aria-expanded for accessibility
+            document.getElementById('mobile-menu-button').setAttribute('aria-expanded', !isHidden);
+        }
+
+        /** Closes the mobile menu. Called by click listeners on menu links. */
+        window.closeMobileMenu = function() {
+             // Delay closing slightly to allow the click action (like smooth scroll) to initiate
+             setTimeout(() => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            }, 100);
+        }
     </script>
 
     <!-- hCaptcha loads with 'async defer' for non-blocking execution -->
