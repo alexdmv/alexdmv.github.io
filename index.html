@@ -7,19 +7,14 @@
     <meta name="description" content="Alex Driving School offers professional, safe and affordable driving lessons for beginners and new drivers in Atlanta, Johns Creek, Dunwoody, Buckhead, and surrounding areas. State Certified Instructor.">
     <meta name="keywords" content="Johns Creek,Atlanta,Dunwoody,Buckhead,driving lessons,driving schools near me,instructor,road test preparation,teen driving,adult driving">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Removed maximum-scale=1 for better accessibility -->
-
-    <!-- Favicons and Theme Colors (Simplified for Lighthouse) -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <meta name="theme-color" content="#0d47a1"> <!-- Using a primary blue tone -->
+    <meta name="theme-color" content="#0d47a1"> <meta name="google-site-verification" content="ass_k0bhhvWXcwoIRSK6Kyrw27_Vl5H9n1VCL-njkXs" />
 
-    <!-- Google Console Verification (Kept in Head) -->
-    <meta name="google-site-verification" content="ass_k0bhhvWXcwoIRSK6Kyrw27_Vl5H9n1VCL-njkXs" />
-
-    <!-- Load Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            // 1. ADDED: Enable dark mode based on the operating system setting
+            darkMode: 'media', 
             theme: {
                 extend: {
                     colors: {
@@ -41,9 +36,10 @@
             scroll-behavior: smooth;
         }
 
-        /* Styling for the large header background image if used, here just a dark color */
+        /* 3. MODIFIED: Removed the direct background-color setting from #site-header
+           to let Tailwind classes control it based on the theme. */
         #site-header {
-            background-color: theme('colors.dark-bg');
+            /* background-color: theme('colors.dark-bg'); <--- REMOVED THIS LINE */
             background-image: url(img/hero-bg.jpg);
             /* Placeholder for a hero image, if available */
             background-size: cover;
@@ -54,24 +50,16 @@
         .fa {
             margin-right: 8px;
         }
-        
-        /* Fix the initial opacity flash by not hiding the body */
     </style>
-    <!-- Load Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CDt3sE3Jc2yYOGt5TfQ6q8T0H/Wk9UjB6M+R5Z8kH8S+K9E8Pz4+8+e+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="font-sans text-gray-800 bg-white">
-    <!-- Removed body opacity: 0; to prevent FOUC and improve LCP -->
-
+<body class="font-sans text-gray-800 bg-white dark:bg-dark-bg dark:text-light-text">
     <div id="my-page" class="min-h-screen">
 
-        <!-- ~~~~~~~~~~ Header ~~~~~~~~~~ -->
-        <header id="site-header" class="relative text-light-text pt-10 pb-20 sm:pb-32 shadow-lg">
+        <header id="site-header" class="relative text-light-text pt-10 pb-20 sm:pb-32 shadow-lg bg-dark-bg dark:bg-gray-900">
 
-            <!-- Navigation and Social -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                <!-- Primary Menu -->
                 <nav class="hidden sm:flex space-x-6 text-sm font-medium">
                     <a href="#features" class="hover:text-secondary transition-colors"><i class="fa fa-car"></i>About</a>
                     <a href="#rates" class="hover:text-secondary transition-colors"><i class="fa fa-usd"></i>Rates</a>
@@ -79,7 +67,6 @@
                     <a href="#reviews" class="hover:text-secondary transition-colors"><i class="fa fa-star"></i>Reviews</a>
                 </nav>
                 
-                <!-- Social Links -->
                 <div class="flex space-x-4 mt-4 sm:mt-0">
                     <a href="https://www.facebook.com/alexdrivingschoolllc" target="_blank" aria-label="Facebook" class="hover:text-secondary transition-colors"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://twitter.com/Alexdmv_com" target="_blank" aria-label="Twitter" class="hover:text-secondary transition-colors"><i class="fab fa-twitter"></i></a>
@@ -88,13 +75,11 @@
                 </div>
             </div>
 
-            <!-- Hero Composition -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-24 text-center">
                 <h3 class="text-4xl sm:text-5xl font-extrabold mb-2 leading-tight">
                     <span class="text-secondary">Alex</span> Driving School
                 </h3>
                 
-                <!-- H1 is essential for SEO and structure -->
                 <h1 class="text-xl sm:text-2xl font-light text-gray-300 max-w-2xl mx-auto mb-6">
                     Individual safe driving lessons for teens and adults
                 </h1>
@@ -113,25 +98,21 @@
             </div>
         </header>
 
-        <!-- ~~~~~~~~~~ Content ~~~~~~~~~~ -->
         <main id="my-content">
 
-            <!-- Features / About Section -->
-            <section id="features" class="py-16 sm:py-24 bg-white">
+            <section id="features" class="py-16 sm:py-24 bg-white dark:bg-dark-bg">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 class="text-4xl font-extrabold text-center text-primary mb-12 sm:mb-16">Why Choose Alex Driving School?</h2>
 
-                    <!-- Responsive Feature Grid -->
                     <div class="grid md:grid-cols-3 gap-10">
 
-                        <!-- Feature 1: Convenience -->
-                        <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
                             <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/800x400/0d47a1/ffffff?text=Convenience');"></div>
                             <div class="p-6">
-                                <h3 class="text-2xl font-bold text-dark-bg mb-4 flex items-center">
+                                <h3 class="text-2xl font-bold text-dark-bg dark:text-light-text mb-4 flex items-center">
                                     <i class="fa fa-map-marker-alt text-primary mr-2"></i> Convenience
                                 </h3>
-                                <ul class="list-disc ml-5 space-y-2 text-gray-600">
+                                <ul class="list-disc ml-5 space-y-2 text-gray-600 dark:text-gray-400">
                                     <li>Patient & Friendly Instructor</li>
                                     <li>Free pickup and drop-off*</li>
                                     <li>Flexible Schedule (evenings and weekends**)</li>
@@ -139,14 +120,13 @@
                             </div>
                         </div>
 
-                        <!-- Feature 2: Safety -->
-                        <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
                             <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/800x400/29b6f6/1a1a1a?text=Safety+First');"></div>
                             <div class="p-6">
-                                <h3 class="text-2xl font-bold text-dark-bg mb-4 flex items-center">
+                                <h3 class="text-2xl font-bold text-dark-bg dark:text-light-text mb-4 flex items-center">
                                     <i class="fa fa-shield-alt text-primary mr-2"></i> Safety
                                 </h3>
-                                <ul class="list-disc ml-5 space-y-2 text-gray-600">
+                                <ul class="list-disc ml-5 space-y-2 text-gray-600 dark:text-gray-400">
                                     <li>State Certified Instructor</li>
                                     <li>Dual brake safety vehicle</li>
                                     <li>Extensive experience</li>
@@ -155,14 +135,13 @@
                             </div>
                         </div>
 
-                        <!-- Feature 3: Service -->
-                        <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
                             <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/800x400/0d47a1/ffffff?text=Professional+Service');"></div>
                             <div class="p-6">
-                                <h3 class="text-2xl font-bold text-dark-bg mb-4 flex items-center">
+                                <h3 class="text-2xl font-bold text-dark-bg dark:text-light-text mb-4 flex items-center">
                                     <i class="fa fa-cogs text-primary mr-2"></i> Comprehensive Service
                                 </h3>
-                                <ul class="list-disc ml-5 space-y-2 text-gray-600">
+                                <ul class="list-disc ml-5 space-y-2 text-gray-600 dark:text-gray-400">
                                     <li>Road test preparation</li>
                                     <li>Various driving techniques</li>
                                     <li>Understanding and maintaining your car</li>
@@ -174,29 +153,26 @@
                 </div>
             </section>
 
-            <!-- Rates Section -->
-            <section id="rates" class="py-16 sm:py-24 bg-gray-100">
+            <section id="rates" class="py-16 sm:py-24 bg-gray-100 dark:bg-gray-900">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-4xl font-extrabold text-dark-bg mb-12">
+                    <h2 class="text-4xl font-extrabold text-dark-bg dark:text-light-text mb-12">
                         <span class="text-primary">Driving</span> Session Rates
                     </h2>
 
-                    <!-- Responsive Pricing Grid -->
                     <div class="grid md:grid-cols-2 gap-6">
 
-                        <!-- Pricing Block -->
-                        <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-primary transition-all duration-300 hover:scale-[1.02]">
-                            <p class="text-lg font-medium text-gray-600 mb-4">Free pick up and drop off*</p>
+                        <div class="bg-white dark:bg-dark-bg p-6 rounded-xl shadow-xl border-t-4 border-primary transition-all duration-300 hover:scale-[1.02]">
+                            <p class="text-lg font-medium text-gray-600 dark:text-gray-400 mb-4">Free pick up and drop off*</p>
                             <div class="space-y-4 text-left">
-                                <div class="flex justify-between items-center border-b pb-2">
+                                <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
                                     <span class="text-xl font-semibold">2 hour session</span>
                                     <span class="text-2xl font-bold text-primary">$180</span>
                                 </div>
-                                <div class="flex justify-between items-center border-b pb-2">
+                                <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
                                     <span class="text-xl font-semibold">4 hour session</span>
                                     <span class="text-2xl font-bold text-primary">$340</span>
                                 </div>
-                                <div class="flex justify-between items-center border-b pb-2">
+                                <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
                                     <span class="text-xl font-semibold">6 hour session</span>
                                     <span class="text-2xl font-bold text-primary">$475</span>
                                 </div>
@@ -207,11 +183,10 @@
                             </div>
                         </div>
                         
-                        <!-- Road Test & Discount Block -->
-                        <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-secondary transition-all duration-300 hover:scale-[1.02]">
-                            <h3 class="text-2xl font-bold text-dark-bg mb-6">Special Services</h3>
+                        <div class="bg-white dark:bg-dark-bg p-6 rounded-xl shadow-xl border-t-4 border-secondary transition-all duration-300 hover:scale-[1.02]">
+                            <h3 class="text-2xl font-bold text-dark-bg dark:text-light-text mb-6">Special Services</h3>
                             <div class="space-y-4 text-left">
-                                <div class="pb-2 border-b">
+                                <div class="pb-2 border-b dark:border-gray-700">
                                     <div class="flex justify-between items-center">
                                         <span class="text-xl font-semibold">Road Test at DDS</span>
                                         <span class="text-2xl font-bold text-secondary">$200</span>
@@ -234,9 +209,8 @@
                         </div>
                     </div>
 
-                    <p class="text-center text-sm text-gray-600 mt-10">Please contact me prior to payment</p>
+                    <p class="text-center text-sm text-gray-600 dark:text-gray-400 mt-10">Please contact me prior to payment</p>
                     
-                    <!-- PayPal Button -->
                     <a href="http://www.PayPal.Me/alexdmv" target="_blank" class="inline-flex items-center mt-4 bg-secondary text-dark-bg font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all">
                         <i class="fa fa-credit-card mr-3"></i> Pay Online
                     </a>
@@ -247,15 +221,14 @@
                 </div>
             </section>
             
-            <!-- Online Driver Education Course -->
-            <section id="onlineEd" class="py-16 sm:py-24 bg-white text-center">
+            <section id="onlineEd" class="py-16 sm:py-24 bg-white dark:bg-dark-bg text-center">
                 <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 class="text-4xl font-extrabold text-dark-bg mb-4">
+                    <h2 class="text-4xl font-extrabold text-dark-bg dark:text-light-text mb-4">
                         <span class="text-primary">Online</span> Driver Education Course
                     </h2>
                     <div class="text-4xl font-bold text-secondary mb-6">$54.99</div>
 
-                    <p class="text-lg text-gray-700 mb-6">
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
                         Georgia DDS approved 30 hour driver education course satisfies Georgia's Joshua's Law requirement.
                         Complete the course online at your own time and pace.
                     </p>
@@ -271,40 +244,32 @@
                 </div>
             </section>
 
-            <!-- Contact Form Section -->
             <section id="contact" class="s-contact-form py-16 sm:py-24 bg-dark-bg">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end">
                     
-                    <!-- Contact Form Card (Right Aligned) -->
-                    <div class="w-full md:w-1/2 lg:w-1/3 bg-white p-8 sm:p-10 rounded-xl shadow-2xl">
-                        <h2 class="text-3xl font-bold text-dark-bg mb-6 text-center">Get In Touch</h2>
+                    <div class="w-full md:w-1/2 lg:w-1/3 bg-white dark:bg-gray-800 p-8 sm:p-10 rounded-xl shadow-2xl">
+                        <h2 class="text-3xl font-bold text-dark-bg dark:text-light-text mb-6 text-center">Get In Touch</h2>
 
-                        <!-- IMPROVED FORM: Uses submit-form.com and better accessibility (labels/ids) -->
                         <form action="https://submit-form.com/jMLhPUwb" method="POST" class="space-y-4">
-                            <input type="text" name="user_name" placeholder="Name" aria-label="Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            <input type="text" name="user_name" placeholder="Name" aria-label="Name" class="w-full p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-light-text rounded-lg focus:ring-primary focus:border-primary">
                             
-                            <!-- Email -->
-                            <input type="email" name="_replyto" id="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            <input type="email" name="_replyto" id="email" placeholder="Email" class="w-full p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-light-text rounded-lg focus:ring-primary focus:border-primary">
                             
-                            <!-- Phone -->
-                            <input type="tel" name="phone" id="phone" placeholder="Phone" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone" class="w-full p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-light-text rounded-lg focus:ring-primary focus:border-primary">
                             
-                            <!-- Checkboxes with correct for/id pairing for A11y -->
                             <div class="space-y-2 pt-2">
                                 <div class="flex items-center">
                                     <input type="checkbox" id="contact_phone" name="contact_preference_phone" value="yes" class="inputCheckbox h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary">
-                                    <label for="contact_phone" class="ml-2 text-gray-700">Contact me by phone</label>
+                                    <label for="contact_phone" class="ml-2 text-gray-700 dark:text-gray-300">Contact me by phone</label>
                                 </div>
                                 <div class="flex items-center">
                                     <input type="checkbox" id="contact_email" name="contact_preference_email" value="yes" class="inputCheckbox h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary">
-                                    <label for="contact_email" class="ml-2 text-gray-700">Contact me by email</label>
+                                    <label for="contact_email" class="ml-2 text-gray-700 dark:text-gray-300">Contact me by email</label>
                                 </div>
                             </div>
                             
-                            <!-- Message Area -->
-                            <textarea id="msg" name="user_message" placeholder="Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></textarea>
+                            <textarea id="msg" name="user_message" placeholder="Message" rows="4" class="w-full p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-light-text rounded-lg focus:ring-primary focus:border-primary"></textarea>
                             
-                            <!-- hCaptcha integration -->
                             <div class="h-captcha" data-sitekey="9fd8fb69-c663-43dd-8f9e-9f0ac46f1f39"></div>
                             
                             <button type="submit" class="w-full bg-secondary text-dark-bg font-bold py-3 rounded-lg shadow-md hover:bg-opacity-80 transition-colors">Send Message</button>
@@ -314,56 +279,50 @@
                 </div>
             </section>
 
-            <!-- Reviews Section -->
-            <section id="reviews" class="py-16 sm:py-24 bg-gray-50">
+            <section id="reviews" class="py-16 sm:py-24 bg-gray-50 dark:bg-gray-900">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-4xl font-extrabold text-dark-bg mb-12">
+                    <h2 class="text-4xl font-extrabold text-dark-bg dark:text-light-text mb-12">
                         <span class="text-primary">Reviews</span> by clients
                     </h2>
 
-                    <!-- Replacing owl-carousel with a responsive Tailwind Grid -->
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                        <!-- Review 1 -->
-                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary">
-                            <div class="text-lg font-bold mb-2">Vera K.</div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-primary">
+                            <div class="text-lg font-bold mb-2 dark:text-light-text">Vera K.</div>
                             <div class="text-yellow-500 mb-3">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                             </div>
-                            <p class="text-sm text-gray-600 italic">
+                            <p class="text-sm text-gray-600 dark:text-gray-400 italic">
                                 "I do really recommend this driving school if you want to learn to drive safely. High quality at reasonable price. Will never ask you for more lessons than you really need."
                             </p>
                         </div>
 
-                        <!-- Review 2 -->
-                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary">
-                            <div class="text-lg font-bold mb-2">Jason E.</div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-primary">
+                            <div class="text-lg font-bold mb-2 dark:text-light-text">Jason E.</div>
                             <div class="text-yellow-500 mb-3">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                             </div>
-                            <p class="text-sm text-gray-600 italic">
+                            <p class="text-sm text-gray-600 dark:text-gray-400 italic">
                                 "This is the best driving school you could ever go to without a doubt!"
                             </p>
                         </div>
 
-                        <!-- Review 3 -->
-                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary">
-                            <div class="text-lg font-bold mb-2">Angela M.</div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-primary">
+                            <div class="text-lg font-bold mb-2 dark:text-light-text">Angela M.</div>
                             <div class="text-yellow-500 mb-3">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                             </div>
-                            <p class="text-sm text-gray-600 italic">
+                            <p class="text-sm text-gray-600 dark:text-gray-400 italic">
                                 "Excellent instructor, tailors to each individual student's specific needs. I feel much safer for my son now that he has been driving with Alex for a total of 10+ hours. I highly recommend him!"
                             </p>
                         </div>
 
-                        <!-- Review 4 -->
-                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary">
-                            <div class="text-lg font-bold mb-2">Mohan K.</div>
+                        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border-t-4 border-primary">
+                            <div class="text-lg font-bold mb-2 dark:text-light-text">Mohan K.</div>
                             <div class="text-yellow-500 mb-3">
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                             </div>
-                            <p class="text-sm text-gray-600 italic">
+                            <p class="text-sm text-gray-600 dark:text-gray-400 italic">
                                 "Very Professional and flexible. I would recommend them to anyone who is looking for a reliable and trustworthy school."
                             </p>
                         </div>
@@ -374,7 +333,6 @@
 
         </main>
 
-        <!-- ~~~~~~~~~~ Footer ~~~~~~~~~~ -->
         <footer id="my-footer" class="bg-dark-bg text-light-text pt-10 pb-4">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
@@ -384,7 +342,6 @@
 
                 <div class="grid md:grid-cols-3 gap-8 pb-10 border-b border-gray-700">
                     
-                    <!-- Contact Info -->
                     <div class="space-y-4">
                         <a href="#my-page" class="text-2xl font-bold text-white hover:text-secondary transition-colors">Alex Driving School</a>
                         
@@ -400,7 +357,6 @@
                         </a>
                     </div>
 
-                    <!-- Footer Menu -->
                     <div>
                         <h4 class="text-lg font-semibold mb-3 text-white">Quick Links</h4>
                         <nav class="space-y-2 text-gray-400 text-sm">
@@ -411,7 +367,6 @@
                         </nav>
                     </div>
 
-                    <!-- Rating Websites -->
                     <div>
                         <h4 class="text-lg font-semibold mb-3 text-white">Find Our Reviews</h4>
                         <div class="space-y-2 text-sm">
@@ -428,7 +383,6 @@
                     </div>
                 </div>
 
-                <!-- Sub-footer -->
                 <div class="text-center text-xs text-gray-500 mt-4 space-y-1">
                     <p class="copyright">Copyright &copy; <span id="currentYear"></span>. Alex Driving School.</p>
                     <p class="license">Program Certification No.: LDT 654</p>
@@ -439,11 +393,7 @@
             </div>
         </footer>
 
-    </div><!-- my-page -->
-
-
-    <!-- Optimized Script Loading -->
-    <script>
+    </div><script>
         // Set the current year for the copyright
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
@@ -453,10 +403,8 @@
         // or carousel initialization (now replaced by CSS grid) is handled.
     </script>
 
-    <!-- hCaptcha loads with 'async defer' for non-blocking execution -->
     <script src="https://hcaptcha.com/1/api.js" async defer></script>
     
-    <!-- Google Analytics loads with 'async' for non-blocking execution -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85798363-1"></script>
     <script>
         // Inlined Google Analytics initialization
@@ -466,7 +414,5 @@
         gtag('config', 'UA-85798363-1');
     </script>
     
-    <!-- Removed commented-out Twitter pixel code entirely to declutter -->
-
-</body>
+    </body>
 </html>
