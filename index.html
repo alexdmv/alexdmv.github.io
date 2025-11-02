@@ -2,488 +2,471 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <title>Alex Driving School - Safe & Affordable Driving Lessons in Atlanta & Johns Creek</title>
+    <meta name="description" content="Alex Driving School offers professional, safe and affordable driving lessons for beginners and new drivers in Atlanta, Johns Creek, Dunwoody, Buckhead, and surrounding areas. State Certified Instructor.">
+    <meta name="keywords" content="Johns Creek,Atlanta,Dunwoody,Buckhead,driving lessons,driving schools near me,instructor,road test preparation,teen driving,adult driving">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Removed maximum-scale=1 for better accessibility -->
 
-	<meta charset="utf-8">
+    <!-- Favicons and Theme Colors (Simplified for Lighthouse) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <meta name="theme-color" content="#0d47a1"> <!-- Using a primary blue tone -->
 
-	<title>Alex Driving School</title>
-	<meta name="description" content="Alex Driving School offers professional, safe and affordable driving lessons for beginners and new drivers in Atlanta, Johns Creek and surrounding areas">
-	<meta name="keywords" content="Johns Creek,Atlanta,Dunwoody,Buckhead,driving lessons,driving schools near me,instructor">
+    <!-- Google Console Verification (Kept in Head) -->
+    <meta name="google-site-verification" content="ass_k0bhhvWXcwoIRSK6Kyrw27_Vl5H9n1VCL-njkXs" />
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Load Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0d47a1', // Deep Blue
+                        'secondary': '#29b6f6', // Light Blue Accent
+                        'dark-bg': '#1a1a1a', // Original dark background
+                        'light-text': '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Apply smooth scrolling for internal links, improving UX */
+        html {
+            scroll-behavior: smooth;
+        }
 
-	<!-- Favicons -->
-	<meta property="og:image" content="path/to/favicon.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-	<link rel="manifest" href="img/favicon/manifest.json">
-	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico">
-	<meta name="msapplication-config" content="img/favicon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+        /* Styling for the large header background image if used, here just a dark color */
+        #site-header {
+            background-color: theme('colors.dark-bg');
+            background-image: url(img/hero-bg.jpg);
+            /* Placeholder for a hero image, if available */
+            background-size: cover;
+            background-position: center;
+        }
 
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#1a1a1a">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#1a1a1a">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#1a1a1a">
-
-	<style>
-		body { opacity: 0; overflow-x: hidden; }
-		html { background-color: #1a1a1a; }
-	</style>
-	<style>
-		.inputCheckbox { width: auto; margin: 0; display: inline-block; margin-right: 10px;} 
-		label { color: #333; }
-	</style>
-
-	<!-- Styles  -->
-	<link rel="stylesheet" href="css/main.min.css">
-	
-	<!-- Google Console verification -->
-	<meta name="google-site-verification" content="ass_k0bhhvWXcwoIRSK6Kyrw27_Vl5H9n1VCL-njkXs" />
-
+        /* Custom style for font awesome to match the original design intent */
+        .fa {
+            margin-right: 8px;
+        }
+        
+        /* Fix the initial opacity flash by not hiding the body */
+    </style>
+    <!-- Load Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CDt3sE3Jc2yYOGt5TfQ6q8T0H/Wk9UjB6M+R5Z8kH8S+K9E8Pz4+8+e+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body id="ishome">
-
-	<div id="my-page" class="my-page">
-
-
-		<!-- ~~~~~~~~~~ Header ~~~~~~~~~~ -->
-
-		<div id="my-header">
-
-			<header id="site-header" class="site-header">
-
-				<nav class="menu-header">
-					<ul>
-						<li><a href="#features"><i class="fa fa fa-car"></i>About</a></li>
-						<li><a href="#rates"><i class="fa fa fa-usd"></i>Rates</a></li>
-						<li><a href="#contact"><i class="fa fa fa-envelope"></i>Contact</a></li>
-						<li><a href="#reviews"><i class="fa fa fa-star"></i>Reviews</a></li>
-					</ul>
-				</nav>
-
-				<div class="header-flex">
-					<div class="flex-center">
-
-						<div class="header-composition">
-							<div class="welcome" style="margin-top: 50px;">
-								<h3 class="page-title"><span>Alex</span> Driving School</h3>
-								<a href="tel:4045424930" class="phone-number"><i class="fa fa-mobile"></i>404-542-4930</a>
-								<div class="header-license">call or text</div>
-								<div class="title-descr">
-								<h1>Individual safe driving lessons for teens and adults</h1>
-								</div><!-- title-descr -->
-								<div class="header-license">Chamblee, GA</div>
-								<div class="header-license">Program Certification No.: LDT 654</div>
-<!-- 								<a href="#onlineEd" class="button button-cta">Driver's Ed</a>
-							</div><!-- welcome -->
-						</div><!-- header-composition -->
-
-					</div><!-- flex-center -->
-				</div><!-- header-flex -->
-
-				<div class="header-social">
-					<nav class="soc">
-						<ul>
-							<li><a href="https://www.facebook.com/alexdrivingschoolllc"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://twitter.com/Alexdmv_com"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="https://www.instagram.com/alex.driving.school"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="mailto:alexdrivingschool2015@gmail.com"><i class="fa fa-envelope"></i></a></li>
-						</ul>
-					</nav>
-				</div><!-- header-social -->
-			</header>
-
-		</div><!-- ID my-header -->
-
-
-		<!-- ~~~~~~~~~~ Content ~~~~~~~~~~ -->
-
-		<div id="my-content">
-			</section>
-				
-			<section id="features" class="s-features">
-
-				<div class="feature-item">
-					<div class="feature-item-content">
-						<div class="feature-item-composition">
-							<div class="feature-img"><img src="img/feature-convenience.svg" alt="Alex Driving School"></div>
-							<h3>Convenience</h3>
-							<ul class="feature-list">
-								<li>Patient & Friendly Instructor</li>
-								<li>Free pickup and drop-off*</li>
-								<li>Flexible Schedule (evenings and weekends**)</li>
-							</ul>
-						</div><!-- feature-item-composition -->
-					</div><!-- feature-item-content -->					
-					<div class="feature-item-image" style="background-image: url(img/feature-img-1.jpg)"></div>
-				</div><!-- feature-item -->
-
-				<div class="feature-item">
-					<div class="feature-item-content">
-						<div class="feature-item-composition">
-							<div class="feature-img"><img src="img/feature-safety.svg" alt="Alex Driving School"></div>
-							<h3>Safety</h3>
-							<ul class="feature-list">
-								<li>State Certified Instructor</li>
-								<li>Dual break safety vehicle</li>
-								<li>Extensive experience</li>
-								<li>Insured and bonded</li>
-							</ul>
-						</div><!-- feature-item-composition -->
-					</div><!-- feature-item-content -->					
-					<div class="feature-item-image" style="background-image: url(img/feature-img-2.jpg)"></div>
-				</div><!-- feature-item -->
-
-				<div class="feature-item">
-					<div class="feature-item-content">
-						<div class="feature-item-composition">
-							<div class="feature-img"><img src="img/feature-services.svg" alt="Alex Driving School"></div>
-							<h3>Service</h3>
-							<ul class="feature-list">
-								<li>Road test preparation</li>
-								<li>Various driving techniques</li>
-								<li>Understanding and maintaining your car</li>
-								<li>and much more!</li>
-							</ul>
-						</div><!-- feature-item-composition -->
-					</div><!-- feature-item-content -->					
-					<div class="feature-item-image" style="background-image: url(img/feature-img-3.jpg)"></div>
-				</div><!-- feature-item -->
-			</section><!-- s-features -->
-
-			<section id="rates" class="s-rates s-overlay">
-				<h2><span>Driving</span> session rates</h2>
-
-				<div class="container rates-mobile">
-					<div class="row">
-
-						<div class="col-sm-4">
-							<div class="price-block">
-								<div class="price-title">Free pick up and drop off*</div>
-								<div class="price-body">
-									<div class="service-title">2 hour session<span class="price-amount">$180</span></div>
-									<div class="service-title">4 hour session<span class="price-amount">$340</span></div>
-									<div class="service-title">6 hour session<span class="price-amount">$475</span></div>
-									<div class="service-title">8 hour session<span class="price-amount">$625</span></div>
-									<div class="service-title">Road Test at DDS <small>(Includes 1-hour practice before test***)
-									</small><span class="price-amount rate-custom">$200</span></div>
-								</div>
-								<a href="#contact" class="button btn-cta btn-appointment">Make an Appointment</a>
-							</div>
-						</div>
-
-
-					</div><!-- row -->
-				</div><!-- container rates-mobile-->
-
-				<div class="container rates-desktop">
-					<div class="row">
-
-						<div class="col-sm-6">
-							<div class="rate-wrapper">
-								<div class="rate-title">2 hour session</div>
-								<div class="rate-value">$180</div>
-								<div class="rate-descr">Free pick up and drop-off*</div>
-							</div>
-						</div>	
-
-						<div class="col-sm-6">
-							<div class="rate-wrapper">
-								<div class="rate-title">4 hour session</div>
-								<div class="rate-value">$340</div>
-								<div class="rate-descr">Free pick up and drop-off*</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="rate-wrapper">
-								<div class="rate-title">6 hour session</div>
-								<div class="rate-value">$475</div>
-								<div class="rate-descr">Free pick up and drop-off*</div>
-							</div>
-						</div>		
-
-						<div class="col-sm-6">
-							<div class="rate-wrapper">
-								<div class="rate-title">8 hour session</div>
-								<div class="rate-value">$625</div>
-								<div class="rate-descr">Free pick up and drop-off*</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="rate-wrapper">
-								<div class="rate-title">Weekday morning discounts</div>
-								<div class="rate-value">Contact us for more info</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="rate-wrapper rate-custom">
-								<div class="rate-title">Road Test at DDS</div>
-								<div class="rate-value">$200</div>
-								<div class="rate-descr">Includes 1-hour practice before test***</div>
-							</div>
-						</div>			
-
-					</div> <!-- row -->
-				</div> <!-- container  rates-desktop -->
-				
-				<div class="rates-footer">Please contact me prior to payment</div>
-
-				<!-- paypal button -->
-				
-				<a href="http://www.PayPal.Me/alexdmv " class="button button-blue"><i class="fa fa-credit-card"></i>
-
-					Pay Online</a>
-				<!-- paypal button END -->
-				
-
-				<div class="rates-footer">
-					*Free pickup and drop-off within 10 miles of the office. <br>**Evenings until 8pm. <br>***Must take at least 2 hours of driving with Alex prior to a road test. <br> Each driving lesson is 2 hours long.
-				</div>
-
-				<!-- 				<a href="#contact" class="button button-revert">Contact Alex</a> -->
-
-			</section><!-- s-rates -->
-
-			<section id="onlineEd" class="s-onlineEd">
-				<h2><span>Online</span> Driver Education Course</h2>
-				<div class="rate-value">$54.99</div>
-
-				<p>Georgia DDS approved 30 hour driver education course satisfied Georgia's Joshua's Law requirement.</p>
-				<p>Online (students do it on their own time , pace)</p>
-				<a href="https://alex.courseinstruction.com/course/register/1" class="button button-blue">Sign up</a>
-				<a href="https://alex.courseinstruction.com/course/content/page/userfront_login" class="button">Log in</a>
-				<div class="rates-footer">After successful competition please allow at least 2 business days to receive certificate. No refunds.</div>
-			</section>
-
-			<section id="contact" class="s-contact-form">
-
-				<div class="container">
-					<div class="row">
-
-						<div class="col-md-5 col-md-offset-7">
-
-							<form action="https://submit-form.com/jMLhPUwb" method="POST" class="contact-form">
-								<!-- <a href="#" class="logo">Alex Driving School</a> -->
-								<input type="text" name="user_name" placeholder="Name">
-								<input type="text" name="_replyto" name="email" placeholder="Email">
-								<input type="text" name="phone" placeholder="Phone">
-								<input type="checkbox" class="inputCheckbox" name="phone" value="contact_me_by_phone"><label for="checkbox">Contact me by phone</label><br>
-								<input type="checkbox" class="inputCheckbox" name="email" value="contact_me_by_email"><label for="checkbox">Contact me by email</label><br>
-								<textarea id="msg" name="user_message" placeholder="Message"></textarea>
-								<div class="h-captcha" data-sitekey="9fd8fb69-c663-43dd-8f9e-9f0ac46f1f39"></div>
-								<button class="button button-white">Send</button>
-							</form>
-
-						</div><!-- col -->
-
-					</div>
-				</div>
-
-
-			</section><!-- s-contact-form -->
-
-
-			<section id="reviews" class="s-reviews s-overlay">
-				<div class="container">
-					<div class="row">
-
-						<div class="col-sm-12">
-							<h2><span>Reviews</span> by clients</h2>
-						</div>
-						<div class="col-sm-8 col-sm-offset-2">
-
-							<div class="owl-carousel reviews">
-
-								<div class="review">
-
-									<div class="review-header">Vera K.</div>
-
-									<div class="review-stars">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-
-									<div class="review-text">
-										I do really recommend this driving school if you want to learn to drive safely. High quality at reasonable price. Will never ask you for more lessons than you really need.
-									</div>
-
-								</div><!-- review -->
-
-								<div class="review">
-
-									<div class="review-header">Jason E.</div>
-
-									<div class="review-stars">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-
-									<div class="review-text">
-										This is the best driving school you could ever go to without a doubt!
-									</div>
-
-								</div><!-- review -->
-
-								<div class="review">
-
-									<div class="review-header">Angela M.</div>
-
-									<div class="review-stars">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-
-									<div class="review-text">
-										Excellent instructor, tailors to each individual student's specific needs. I feel much safer for my son now that he has been driving with Alex for a total of 10+ hours. I highly recommend him!
-									</div>
-
-								</div><!-- review -->
-
-								<div class="review">
-
-									<div class="review-header">Mohan K.</div>
-
-									<div class="review-stars">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-
-									<div class="review-text">
-										Very Professional and flexible. I would recommend them to anyone who is looking for a reliable and trustworthy school.
-									</div>
-
-								</div><!-- review -->									
-
-							</div><!-- owl-carousel reviews -->
-
-						</div>
-
-					</div>
-				</div>
-			</section><!-- s-feedback -->
-
-
-		</div><!-- ID my-content -->
-
-
-		<!-- ~~~~~~~~~~ Footer ~~~~~~~~~~ -->
-
-		<div id="my-footer">
-			<a href="#my-page" class="back-to-top">Back to top</a>
-			<div class="container">
-				<div class="row">
-
-					<div class="col-md-4">
-
-						<a href="#my-page" class="logo logo-footer">Alex Driving School</a>
-
-						<div class="soc soc-footer">
-							<ul>
-								<li><a href="https://www.facebook.com/alexdrivingschoolllc"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="https://twitter.com/Alexdmv_com"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="https://www.instagram.com/alex.driving.school"><i class="fa fa-instagram"></i></a></li>
-								<li><a href="mailto:alexdrivingschool2015@gmail.com""><i class="fa fa-envelope"></i></a></li>
-							</ul>
-						</div>
-
-						<a href="tel:4045424930" class="phone-number phone-number-footer"><i class="fa fa-mobile"></i>404-542-4930</a>
-
-					</div>
-
-					<div class="col-md-4">
-
-						<nav class="menu-footer">
-							<ul>
-								<li><a href="#features">Services</a></li>
-								<li><a href="#rates">Rates</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="#reviews">Reviews</a></li>
-							</ul>
-						</nav>
-
-					</div>
-
-					<div class="col-md-4">
-						
-						<div class="rating-websites">
-
-							<a href="https://www.yelp.com/biz/alex-driving-school-atlanta"><i class="fa fa-yelp"></i> Read reviews on Yelp!</a>
-
-							<a href="https://www.facebook.com/pg/alexdrivingschoolllc/reviews/"><i class="fa fa-facebook-official"></i> Read reviews on Facebook</a>
-
-							<a href="https://goo.gl/maps/rkRt1MMqhyM2"><i class="fa fa-google"></i> Read reviews on Google</a>
-
-						</div>
-					</div>
-
-				</div><!-- row -->
-			</div><!-- container -->
-
-			<div class="sub-footer">
-
-				<div class="copyright">Copyright © 2017. Alex Driving School.</div>
-
-				<div class="license">Program Certification No.: LDT 654</div>
-
-				<a class="link-to-wm" href="http://www.serhii-css.com">Website by serhii.css</a>
-
-
-				<div class="icon-credit">Some icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-
-			</div><!-- sub-footer -->
-
-		</div><!-- ID my-footer -->
-
-	</div><!-- my-page -->
-
-
-	<script src="js/scripts.min.js"></script>
-
-	<script src="https://hcaptcha.com/1/api.js" async defer></script>									
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85798363-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-85798363-1');
-	</script>
-
-	<!-- Google Analytics END-->
-
-	<!-- Twitter universal website tag code -->
-	<!-- <script>
-		!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-		},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-		a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-// Insert Twitter Pixel ID and Standard Event data below
-twq('init','nydut');
-twq('track','PageView');
-</script> -->
-<!-- End Twitter universal website tag code -->
+<body class="font-sans text-gray-800 bg-white">
+    <!-- Removed body opacity: 0; to prevent FOUC and improve LCP -->
+
+    <div id="my-page" class="min-h-screen">
+
+        <!-- ~~~~~~~~~~ Header ~~~~~~~~~~ -->
+        <header id="site-header" class="relative text-light-text pt-10 pb-20 sm:pb-32 shadow-lg">
+
+            <!-- Navigation and Social -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <!-- Primary Menu -->
+                <nav class="hidden sm:flex space-x-6 text-sm font-medium">
+                    <a href="#features" class="hover:text-secondary transition-colors"><i class="fa fa-car"></i>About</a>
+                    <a href="#rates" class="hover:text-secondary transition-colors"><i class="fa fa-usd"></i>Rates</a>
+                    <a href="#contact" class="hover:text-secondary transition-colors"><i class="fa fa-envelope"></i>Contact</a>
+                    <a href="#reviews" class="hover:text-secondary transition-colors"><i class="fa fa-star"></i>Reviews</a>
+                </nav>
+                
+                <!-- Social Links -->
+                <div class="flex space-x-4 mt-4 sm:mt-0">
+                    <a href="https://www.facebook.com/alexdrivingschoolllc" target="_blank" aria-label="Facebook" class="hover:text-secondary transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/Alexdmv_com" target="_blank" aria-label="Twitter" class="hover:text-secondary transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/alex.driving.school" target="_blank" aria-label="Instagram" class="hover:text-secondary transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:alexdrivingschool2015@gmail.com" aria-label="Email" class="hover:text-secondary transition-colors"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Hero Composition -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-24 text-center">
+                <h3 class="text-4xl sm:text-5xl font-extrabold mb-2 leading-tight">
+                    <span class="text-secondary">Alex</span> Driving School
+                </h3>
+                
+                <!-- H1 is essential for SEO and structure -->
+                <h1 class="text-xl sm:text-2xl font-light text-gray-300 max-w-2xl mx-auto mb-6">
+                    Individual safe driving lessons for teens and adults
+                </h1>
+
+                <div class="space-y-2 mt-8">
+                    <a href="tel:4045424930" class="inline-flex items-center text-3xl sm:text-4xl font-bold text-white bg-primary p-3 rounded-xl shadow-lg hover:bg-opacity-90 transition-all">
+                        <i class="fa fa-mobile mr-3"></i> 404-542-4930
+                    </a>
+                    <p class="text-sm text-gray-400">Call or Text</p>
+                </div>
+                
+                <div class="mt-8 text-lg font-medium text-gray-300 space-y-1">
+                    <p>Chamblee, GA</p>
+                    <p class="text-sm">Program Certification No.: LDT 654</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- ~~~~~~~~~~ Content ~~~~~~~~~~ -->
+        <main id="my-content">
+
+            <!-- Features / About Section -->
+            <section id="features" class="py-16 sm:py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-4xl font-extrabold text-center text-primary mb-12 sm:mb-16">Why Choose Alex Driving School?</h2>
+
+                    <!-- Responsive Feature Grid -->
+                    <div class="grid md:grid-cols-3 gap-10">
+
+                        <!-- Feature 1: Convenience -->
+                        <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/800x400/0d47a1/ffffff?text=Convenience');"></div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-dark-bg mb-4 flex items-center">
+                                    <i class="fa fa-map-marker-alt text-primary mr-2"></i> Convenience
+                                </h3>
+                                <ul class="list-disc ml-5 space-y-2 text-gray-600">
+                                    <li>Patient & Friendly Instructor</li>
+                                    <li>Free pickup and drop-off*</li>
+                                    <li>Flexible Schedule (evenings and weekends**)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2: Safety -->
+                        <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/800x400/29b6f6/1a1a1a?text=Safety+First');"></div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-dark-bg mb-4 flex items-center">
+                                    <i class="fa fa-shield-alt text-primary mr-2"></i> Safety
+                                </h3>
+                                <ul class="list-disc ml-5 space-y-2 text-gray-600">
+                                    <li>State Certified Instructor</li>
+                                    <li>Dual brake safety vehicle</li>
+                                    <li>Extensive experience</li>
+                                    <li>Insured and bonded</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3: Service -->
+                        <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                            <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/800x400/0d47a1/ffffff?text=Professional+Service');"></div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-dark-bg mb-4 flex items-center">
+                                    <i class="fa fa-cogs text-primary mr-2"></i> Comprehensive Service
+                                </h3>
+                                <ul class="list-disc ml-5 space-y-2 text-gray-600">
+                                    <li>Road test preparation</li>
+                                    <li>Various driving techniques</li>
+                                    <li>Understanding and maintaining your car</li>
+                                    <li>and much more!</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rates Section -->
+            <section id="rates" class="py-16 sm:py-24 bg-gray-100">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-4xl font-extrabold text-dark-bg mb-12">
+                        <span class="text-primary">Driving</span> Session Rates
+                    </h2>
+
+                    <!-- Responsive Pricing Grid -->
+                    <div class="grid md:grid-cols-2 gap-6">
+
+                        <!-- Pricing Block -->
+                        <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-primary transition-all duration-300 hover:scale-[1.02]">
+                            <p class="text-lg font-medium text-gray-600 mb-4">Free pick up and drop off*</p>
+                            <div class="space-y-4 text-left">
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-xl font-semibold">2 hour session</span>
+                                    <span class="text-2xl font-bold text-primary">$180</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-xl font-semibold">4 hour session</span>
+                                    <span class="text-2xl font-bold text-primary">$340</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-xl font-semibold">6 hour session</span>
+                                    <span class="text-2xl font-bold text-primary">$475</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xl font-semibold">8 hour session</span>
+                                    <span class="text-2xl font-bold text-primary">$625</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Road Test & Discount Block -->
+                        <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-secondary transition-all duration-300 hover:scale-[1.02]">
+                            <h3 class="text-2xl font-bold text-dark-bg mb-6">Special Services</h3>
+                            <div class="space-y-4 text-left">
+                                <div class="pb-2 border-b">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xl font-semibold">Road Test at DDS</span>
+                                        <span class="text-2xl font-bold text-secondary">$200</span>
+                                    </div>
+                                    <small class="text-gray-500 block mt-1">Includes 1-hour practice before test***</small>
+                                </div>
+
+                                <div class="pb-2">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-xl font-semibold">Weekday Morning Discount</span>
+                                        <span class="text-2xl font-bold text-secondary">Varies</span>
+                                    </div>
+                                    <small class="text-gray-500 block mt-1">Contact us for more info</small>
+                                </div>
+                            </div>
+                            
+                            <a href="#contact" class="mt-8 w-full block bg-primary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-colors">
+                                Make an Appointment
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-sm text-gray-600 mt-10">Please contact me prior to payment</p>
+                    
+                    <!-- PayPal Button -->
+                    <a href="http://www.PayPal.Me/alexdmv" target="_blank" class="inline-flex items-center mt-4 bg-secondary text-dark-bg font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all">
+                        <i class="fa fa-credit-card mr-3"></i> Pay Online
+                    </a>
+                    
+                    <div class="text-center text-sm text-gray-500 mt-8 leading-relaxed">
+                        *Free pickup and drop-off within 10 miles of the office. <br>**Evenings until 8pm. <br>***Must take at least 2 hours of driving with Alex prior to a road test. <br> Each driving lesson is 2 hours long.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Online Driver Education Course -->
+            <section id="onlineEd" class="py-16 sm:py-24 bg-white text-center">
+                <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-4xl font-extrabold text-dark-bg mb-4">
+                        <span class="text-primary">Online</span> Driver Education Course
+                    </h2>
+                    <div class="text-4xl font-bold text-secondary mb-6">$54.99</div>
+
+                    <p class="text-lg text-gray-700 mb-6">
+                        Georgia DDS approved 30 hour driver education course satisfies Georgia's Joshua's Law requirement.
+                        Complete the course online at your own time and pace.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://alex.courseinstruction.com/course/register/1" target="_blank" class="w-full sm:w-auto bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-opacity-90 transition-colors">Sign up</a>
+                        <a href="https://alex.courseinstruction.com/course/content/page/userfront_login" target="_blank" class="w-full sm:w-auto bg-gray-200 text-dark-bg font-bold py-3 px-8 rounded-lg shadow-md hover:bg-gray-300 transition-colors">Log in</a>
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-6">
+                        After successful competition please allow at least 2 business days to receive certificate. No refunds.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section id="contact" class="s-contact-form py-16 sm:py-24 bg-dark-bg">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end">
+                    
+                    <!-- Contact Form Card (Right Aligned) -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 bg-white p-8 sm:p-10 rounded-xl shadow-2xl">
+                        <h2 class="text-3xl font-bold text-dark-bg mb-6 text-center">Get In Touch</h2>
+
+                        <!-- IMPROVED FORM: Uses submit-form.com and better accessibility (labels/ids) -->
+                        <form action="https://submit-form.com/jMLhPUwb" method="POST" class="space-y-4">
+                            <input type="text" name="user_name" placeholder="Name" aria-label="Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            
+                            <!-- Email -->
+                            <input type="email" name="_replyto" id="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            
+                            <!-- Phone -->
+                            <input type="tel" name="phone" id="phone" placeholder="Phone" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            
+                            <!-- Checkboxes with correct for/id pairing for A11y -->
+                            <div class="space-y-2 pt-2">
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="contact_phone" name="contact_preference_phone" value="yes" class="inputCheckbox h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <label for="contact_phone" class="ml-2 text-gray-700">Contact me by phone</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="contact_email" name="contact_preference_email" value="yes" class="inputCheckbox h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <label for="contact_email" class="ml-2 text-gray-700">Contact me by email</label>
+                                </div>
+                            </div>
+                            
+                            <!-- Message Area -->
+                            <textarea id="msg" name="user_message" placeholder="Message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></textarea>
+                            
+                            <!-- hCaptcha integration -->
+                            <div class="h-captcha" data-sitekey="9fd8fb69-c663-43dd-8f9e-9f0ac46f1f39"></div>
+                            
+                            <button type="submit" class="w-full bg-secondary text-dark-bg font-bold py-3 rounded-lg shadow-md hover:bg-opacity-80 transition-colors">Send Message</button>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section id="reviews" class="py-16 sm:py-24 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-4xl font-extrabold text-dark-bg mb-12">
+                        <span class="text-primary">Reviews</span> by clients
+                    </h2>
+
+                    <!-- Replacing owl-carousel with a responsive Tailwind Grid -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                        <!-- Review 1 -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary">
+                            <div class="text-lg font-bold mb-2">Vera K.</div>
+                            <div class="text-yellow-500 mb-3">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">
+                                "I do really recommend this driving school if you want to learn to drive safely. High quality at reasonable price. Will never ask you for more lessons than you really need."
+                            </p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary">
+                            <div class="text-lg font-bold mb-2">Jason E.</div>
+                            <div class="text-yellow-500 mb-3">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">
+                                "This is the best driving school you could ever go to without a doubt!"
+                            </p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary">
+                            <div class="text-lg font-bold mb-2">Angela M.</div>
+                            <div class="text-yellow-500 mb-3">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">
+                                "Excellent instructor, tailors to each individual student's specific needs. I feel much safer for my son now that he has been driving with Alex for a total of 10+ hours. I highly recommend him!"
+                            </p>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-primary">
+                            <div class="text-lg font-bold mb-2">Mohan K.</div>
+                            <div class="text-yellow-500 mb-3">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-600 italic">
+                                "Very Professional and flexible. I would recommend them to anyone who is looking for a reliable and trustworthy school."
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ~~~~~~~~~~ Footer ~~~~~~~~~~ -->
+        <footer id="my-footer" class="bg-dark-bg text-light-text pt-10 pb-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <a href="#my-page" class="fixed bottom-4 right-4 bg-secondary text-dark-bg p-3 rounded-full shadow-lg hover:bg-opacity-80 transition-all z-50" aria-label="Back to top">
+                    <i class="fa fa-arrow-up"></i>
+                </a>
+
+                <div class="grid md:grid-cols-3 gap-8 pb-10 border-b border-gray-700">
+                    
+                    <!-- Contact Info -->
+                    <div class="space-y-4">
+                        <a href="#my-page" class="text-2xl font-bold text-white hover:text-secondary transition-colors">Alex Driving School</a>
+                        
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/alexdrivingschoolllc" target="_blank" aria-label="Facebook" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/Alexdmv_com" target="_blank" aria-label="Twitter" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/alex.driving.school" target="_blank" aria-label="Instagram" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:alexdrivingschool2015@gmail.com" aria-label="Email" class="text-gray-400 hover:text-white transition-colors"><i class="fa fa-envelope"></i></a>
+                        </div>
+
+                        <a href="tel:4045424930" class="flex items-center text-secondary text-xl font-medium hover:text-white transition-colors">
+                            <i class="fa fa-mobile mr-2"></i> 404-542-4930
+                        </a>
+                    </div>
+
+                    <!-- Footer Menu -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-white">Quick Links</h4>
+                        <nav class="space-y-2 text-gray-400 text-sm">
+                            <a href="#features" class="block hover:text-secondary transition-colors">Services</a>
+                            <a href="#rates" class="block hover:text-secondary transition-colors">Rates</a>
+                            <a href="#contact" class="block hover:text-secondary transition-colors">Contact</a>
+                            <a href="#reviews" class="block hover:text-secondary transition-colors">Reviews</a>
+                        </nav>
+                    </div>
+
+                    <!-- Rating Websites -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-3 text-white">Find Our Reviews</h4>
+                        <div class="space-y-2 text-sm">
+                            <a href="https://www.yelp.com/biz/alex-driving-school-atlanta" target="_blank" class="flex items-center text-gray-400 hover:text-secondary transition-colors">
+                                <i class="fab fa-yelp mr-2 w-4"></i> Read reviews on Yelp!
+                            </a>
+                            <a href="https://www.facebook.com/pg/alexdrivingschoolllc/reviews/" target="_blank" class="flex items-center text-gray-400 hover:text-secondary transition-colors">
+                                <i class="fab fa-facebook-official mr-2 w-4"></i> Read reviews on Facebook
+                            </a>
+                            <a href="https://goo.gl/maps/rkRt1MMqhyM2" target="_blank" class="flex items-center text-gray-400 hover:text-secondary transition-colors">
+                                <i class="fab fa-google mr-2 w-4"></i> Read reviews on Google
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-footer -->
+                <div class="text-center text-xs text-gray-500 mt-4 space-y-1">
+                    <p class="copyright">Copyright &copy; <span id="currentYear"></span>. Alex Driving School.</p>
+                    <p class="license">Program Certification No.: LDT 654</p>
+                    <a class="link-to-wm hover:text-white" href="http://www.serhii-css.com" target="_blank">Website by serhii.css</a>
+                    <p class="icon-credit">Some icons made by <a href="http://www.freepik.com" target="_blank" class="hover:text-white">Freepik</a> from <a href="http://www.flaticon.com" target="_blank" class="hover:text-white">www.flaticon.com</a></p>
+                </div>
+
+            </div>
+        </footer>
+
+    </div><!-- my-page -->
+
+
+    <!-- Optimized Script Loading -->
+    <script>
+        // Set the current year for the copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // --- Mockup of removed scripts.min.js functionality ---
+        // Since we removed scripts.min.js, any critical functionality like 
+        // smooth scrolling (now handled by CSS `scroll-behavior: smooth`) 
+        // or carousel initialization (now replaced by CSS grid) is handled.
+    </script>
+
+    <!-- hCaptcha loads with 'async defer' for non-blocking execution -->
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    
+    <!-- Google Analytics loads with 'async' for non-blocking execution -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85798363-1"></script>
+    <script>
+        // Inlined Google Analytics initialization
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-85798363-1');
+    </script>
+    
+    <!-- Removed commented-out Twitter pixel code entirely to declutter -->
 
 </body>
 </html>
